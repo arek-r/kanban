@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,400i,500,600,700,700i,900|Roboto:400,400i,500,700,900&subset=latin-ext');
+
+/*GLOBAL*/
+body {
+	margin: 0;
+	background: #0079bf;
+	font-family: 'Kanit', sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+.ui-sortable {
+	min-height: 80px;
+}
+.board,
+.board-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*BUTTONS*/
+.create-column {
+	background: #5cb85c;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	padding: 15px 15px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px;
+	cursor: pointer;
+	transition: 1s;
+}
+.create-column:focus {
+	outline: none;
+}
+.create-column:hover {
+	transform: scale(1.1) rotate(180deg);
+	background: #449d44;
+}
+.btn-delete-col,
+.btn-delete-card {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 22px;
+	height: 22px;
+	border: 0;
+	background-color: #286090;
+	color: white;
+	cursor: pointer;
+}
+.btn-delete-col {
+	border-top-right-radius: 5px;
+}
+.column-add-card {
+	cursor: pointer;
+	margin: 5px 8px;
+	padding: 5px 10px;
+	display: block;
+	border: none;
+	background: #337ab7;
+	color: #fff;
+	border-radius: 5px;
+}
+.column-add-card:hover {
+	background: #286090;
+}
+[class^='btn-']:hover {
+	background: #c9302c;
+}
+
+/* BOARD */
+.board {
+	flex-direction: column;
+}
+.board-header {
+	max-width: 500px;
+	width: 400px;
+	text-align: center;
+}
+.board-header h1 {
+	margin-left: 8px;
+	color: #fff;
+	max-width: 1200px;
+	font-family: 'Roboto', sans-serif;
+}
+.column-container {
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+/* COLUMN */
+.column {
+	order: 1;
+	min-width: 300px;
+	min-height: 50vh;
+	background-color: #e2e4e6;
+	margin-left: 8px;
+	list-style: none;
+	position: relative;
+	border-radius: 5px;
+}
+.column-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: #0079bf;
+}
+
+/* STYLE KARTY */
+.card {
+	box-sizing: border-box;
+	display: block;
+	height: 60px;
+	margin-bottom: 5px;
+	padding: 4px;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+	color: #286090;
+}
+.card-list {
+	list-style: none;
+	margin: 5px;
+	padding: 0px;
+}
+.card-description {
+	margin: 2px 0;
+}
+.card-placeholder {
+	box-sizing: border-box;
+	display: block;
+	height: 60px;
+	margin-bottom: 5px;
+	border: 2px solid lightgrey;
+	background-color: lightblue;
+}
